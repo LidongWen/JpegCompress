@@ -23,7 +23,7 @@ public class JpegUtils {
     static {
         try {
             System.loadLibrary("jpeg");
-            System.loadLibrary("native-lib");
+            System.loadLibrary("compress-jpeg");
         }catch (Exception e){
 
         }

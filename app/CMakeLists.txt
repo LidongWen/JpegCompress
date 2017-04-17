@@ -11,13 +11,13 @@ cmake_minimum_required(VERSION 3.4.1)
 # Gradle automatically packages shared libraries with your APK.
 
 add_library( # Sets the name of the library.
-             native-lib
+             compress-jpeg
 
              # Sets the library as a shared library.
              SHARED
 
              # Provides a relative path to your source file(s).
-             src/main/cpp/native-lib.cpp src/main/cpp/imagelib.cpp)
+              src/main/cpp/imagelib.cpp)
 
 
 #include 这个目录下所有的文件
@@ -49,7 +49,7 @@ find_library( # Sets the name of the path variable.
 # build script, prebuilt third-party libraries, or system libraries.
 
 target_link_libraries( # Specifies the target library.
-                       native-lib
+                       compress-jpeg
 
                        jpeg
                        #jnigraphics这个是android下面的bitmap.h对应的库

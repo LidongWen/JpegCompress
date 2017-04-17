@@ -56,6 +56,15 @@ jstring JNICALL Java_com_wenld_jpegcompress_JpegUtils_compressBitmap
     int resultCode=generateJPEG(tempData,width,height,quality,filePath,optimize);
 
     free(tempData);
+
+//    // 释放bitmap,调用bitmap的recycle
+//    // 3.2 获取对象的class
+//    jclass obj_clazz = env -> GetObjectClass(bitmap);
+//    // 3.3 通过class获取方法id
+//    jmethodID method_id = env -> GetMethodID(obj_clazz,"recycle","()V");
+//    // 3.4 调用方法释放Bitmap
+//    env->CallVoidMethod(bitmap,method_id);
+
     if (resultCode == 0) {
         jstring jstring1=env->NewStringUTF("压缩失败");
         return jstring1;
